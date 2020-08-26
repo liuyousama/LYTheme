@@ -31,9 +31,11 @@
 		9E317D2324F614BE00C1140C /* UIKitExtensionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D2224F614BE00C1140C /* UIKitExtensionUtils.swift */; };
 		9E317D2524F614D600C1140C /* LYTheme+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D2424F614D600C1140C /* LYTheme+UIView.swift */; };
 		9E317D2924F6159100C1140C /* LYThemeColorAdaptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D2824F6159100C1140C /* LYThemeColorAdaptorTests.swift */; };
+		9E39CB7824F6625800F678AC /* LYThemeImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E39CB7724F6625800F678AC /* LYThemeImagePicker.swift */; };
 		9E3EF82524F551BD00355B62 /* LYThemeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */; };
 		9E3EF82D24F5579400355B62 /* test.plist in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EF82C24F555AF00355B62 /* test.plist */; };
 		9ECC3A8F24F546580072C946 /* LYThemeUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC3A8E24F546580072C946 /* LYThemeUtilTests.swift */; };
+		9ED8307D24F67479001696B0 /* LYThemeImageAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8307C24F67479001696B0 /* LYThemeImageAdaptor.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_44 /* LYTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LYTheme::LYTheme::Product" /* LYTheme.framework */; platformFilter = ios; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -66,9 +68,11 @@
 		9E317D2224F614BE00C1140C /* UIKitExtensionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionUtils.swift; sourceTree = "<group>"; };
 		9E317D2424F614D600C1140C /* LYTheme+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LYTheme+UIView.swift"; sourceTree = "<group>"; };
 		9E317D2824F6159100C1140C /* LYThemeColorAdaptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeColorAdaptorTests.swift; sourceTree = "<group>"; };
+		9E39CB7724F6625800F678AC /* LYThemeImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeImagePicker.swift; sourceTree = "<group>"; };
 		9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeUtil.swift; sourceTree = "<group>"; };
 		9E3EF82C24F555AF00355B62 /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 		9ECC3A8E24F546580072C946 /* LYThemeUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeUtilTests.swift; sourceTree = "<group>"; };
+		9ED8307C24F67479001696B0 /* LYThemeImageAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeImageAdaptor.swift; sourceTree = "<group>"; };
 		"LYTheme::LYTheme::Product" /* LYTheme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LYTheme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"LYTheme::LYThemeTests::Product" /* LYThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LYThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				9E317D1524F5FA9500C1140C /* LYThemeManager.swift */,
 				9E317D1924F5FE7700C1140C /* LYThemeColorPicker.swift */,
 				9E317D1F24F6143600C1140C /* LYThemeColorAdaptor.swift */,
+				9E39CB7724F6625800F678AC /* LYThemeImagePicker.swift */,
+				9ED8307C24F67479001696B0 /* LYThemeImageAdaptor.swift */,
 				9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */,
 				9E317D1724F5FAC600C1140C /* Notification+LYTheme.swift */,
 				9E317D1D24F6038E00C1140C /* DispatchQueue+LYTheme.swift */,
@@ -273,6 +279,7 @@
 				9E317D2524F614D600C1140C /* LYTheme+UIView.swift in Sources */,
 				9E317D1E24F6038E00C1140C /* DispatchQueue+LYTheme.swift in Sources */,
 				9E317D1A24F5FE7700C1140C /* LYThemeColorPicker.swift in Sources */,
+				9E39CB7824F6625800F678AC /* LYThemeImagePicker.swift in Sources */,
 				9E317D2024F6143600C1140C /* LYThemeColorAdaptor.swift in Sources */,
 				9E317D1624F5FA9500C1140C /* LYThemeManager.swift in Sources */,
 				9E317D1824F5FAC600C1140C /* Notification+LYTheme.swift in Sources */,
@@ -292,6 +299,7 @@
 			buildActionMask = 0;
 			files = (
 				9E3EF82D24F5579400355B62 /* test.plist in Sources */,
+				9ED8307D24F67479001696B0 /* LYThemeImageAdaptor.swift in Sources */,
 				9ECC3A8F24F546580072C946 /* LYThemeUtilTests.swift in Sources */,
 				9E317D2924F6159100C1140C /* LYThemeColorAdaptorTests.swift in Sources */,
 				9E317D1C24F600DD00C1140C /* LYThemeColorPickerTests.swift in Sources */,
