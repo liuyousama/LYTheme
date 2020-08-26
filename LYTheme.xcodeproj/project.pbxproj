@@ -21,10 +21,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9E317D1424F5FA4100C1140C /* LYTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D1324F5FA4100C1140C /* LYTheme.swift */; };
+		9E317D1624F5FA9500C1140C /* LYThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D1524F5FA9500C1140C /* LYThemeManager.swift */; };
+		9E317D1824F5FAC600C1140C /* Notification+LYTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E317D1724F5FAC600C1140C /* Notification+LYTheme.swift */; };
 		9E3EF82524F551BD00355B62 /* LYThemeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */; };
 		9E3EF82D24F5579400355B62 /* test.plist in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EF82C24F555AF00355B62 /* test.plist */; };
 		9ECC3A8F24F546580072C946 /* LYThemeUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECC3A8E24F546580072C946 /* LYThemeUtilTests.swift */; };
-		OBJ_23 /* LYTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* LYTheme.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_44 /* LYTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LYTheme::LYTheme::Product" /* LYTheme.framework */; platformFilter = ios; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E317D1324F5FA4100C1140C /* LYTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYTheme.swift; sourceTree = "<group>"; };
+		9E317D1524F5FA9500C1140C /* LYThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeManager.swift; sourceTree = "<group>"; };
+		9E317D1724F5FAC600C1140C /* Notification+LYTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+LYTheme.swift"; sourceTree = "<group>"; };
 		9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeUtil.swift; sourceTree = "<group>"; };
 		9E3EF82C24F555AF00355B62 /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 		9ECC3A8E24F546580072C946 /* LYThemeUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYThemeUtilTests.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		"LYTheme::LYThemeTests::Product" /* LYThemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = LYThemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* LYTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LYTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +137,10 @@
 		OBJ_8 /* LYTheme */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* LYTheme.swift */,
+				9E317D1324F5FA4100C1140C /* LYTheme.swift */,
+				9E317D1524F5FA9500C1140C /* LYThemeManager.swift */,
 				9E3EF82424F551BD00355B62 /* LYThemeUtil.swift */,
+				9E317D1724F5FAC600C1140C /* Notification+LYTheme.swift */,
 			);
 			name = LYTheme;
 			path = Sources/LYTheme;
@@ -232,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9E317D1424F5FA4100C1140C /* LYTheme.swift in Sources */,
 				9E3EF82524F551BD00355B62 /* LYThemeUtil.swift in Sources */,
-				OBJ_23 /* LYTheme.swift in Sources */,
+				9E317D1624F5FA9500C1140C /* LYThemeManager.swift in Sources */,
+				9E317D1824F5FAC600C1140C /* Notification+LYTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
