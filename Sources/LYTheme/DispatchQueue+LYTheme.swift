@@ -10,8 +10,7 @@ import Foundation
 extension DispatchQueue {
     static let workQueue = DispatchQueue(
         label: "com.liuyousama.LYTheme.workQueue",
-        qos: .default,
-        attributes: .concurrent
+        qos: .default
     )
     
     func barrierAsync(execute: @escaping () -> Void) {

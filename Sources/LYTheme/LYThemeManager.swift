@@ -18,15 +18,21 @@ public class LYThemeManager {
     public func switchTheme(_ theme: LYTheme, completion: (()->Void)? = nil) {
         guard currentTheme != theme else {return}
         
-        DispatchQueue.workQueue.barrierAsync { [weak self] in
+        /// 异步地向workQueue（串行队列）中提交一项任务
+        DispatchQueue.workQueue.async { [weak self] in
             guard let `self` = self else {
                 fatalError("[LYTheme]:LYThemeManager has been deinited! Please keep your LYThemeManager in the memory during using it")
             }
             // 执行theme状态变更操作，并发出通知
+            self.currentTheme = theme
             self._switchThemeState()
+            // 由于通知是同步的，所以发送通知会在此向workQueue中提交一系列的 颜色/图片 更新任务
             Notification.Name.LYThemeChanged.post()
-            // 完成所有任务之后执行completion
-            if let completion = completion { completion() }
+            // 将completion的执行作为一个任务提交给workQueue，此时该任务在队列的最末尾
+            // 只有当此次主题变动所产生的 颜色/图片 更新任务全部执行完毕才会调用completion
+            DispatchQueue.workQueue.async {
+                DispatchQueue.main.sync{completion?()}
+            }
         }
     }
     

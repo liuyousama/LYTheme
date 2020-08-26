@@ -26,7 +26,6 @@ struct LYThemeColorPicker: ExpressibleByArrayLiteral,
         pickedType = .indexed(colors)
     }
     
-    #warning("TODO: 读写隔离，此操作之后要放入workQueue当中")
     /// 获取到当前选择器在对应主题中拿到的颜色
     var pickedColor: UIColor? {
         let currentState = LYThemeManager.shared.currentThemeState
