@@ -11,21 +11,17 @@ public class LYThemeManager {
     public static var shared = LYThemeManager()
     public var currentTheme: LYTheme? = nil
     
-    private var currentThemeState: ThemeState? = nil
-    #warning("使用读写锁代替，LYThemeColorPicker中还需要对Manager进行读取")
+    var currentThemeState: ThemeState? = nil
     private lazy var lock = NSLock()
     private init(){}
     
-    func switchTheme(_ theme: LYTheme, completion: (()->Void)? = nil) {
+    public func switchTheme(_ theme: LYTheme, completion: (()->Void)? = nil) {
         guard currentTheme != theme else {return}
-
-        DispatchQueue.global().async { [weak self] in
+        
+        DispatchQueue.workQueue.barrierAsync { [weak self] in
             guard let `self` = self else {
-                fatalError("[LYTheme]:LYThemeManager has been deinited! Please keep your LYThemeManaget in the memory during using it")
+                fatalError("[LYTheme]:LYThemeManager has been deinited! Please keep your LYThemeManager in the memory during using it")
             }
-            // 因为可能在多个线程中调用switchTheme方法来变更当前的主题数据，所以加锁以确保并发安全
-            self.lock.lock()
-            defer {self.lock.unlock()}
             // 执行theme状态变更操作，并发出通知
             self._switchThemeState()
             Notification.Name.LYThemeChanged.post()
@@ -51,7 +47,7 @@ public class LYThemeManager {
 }
 
 extension LYThemeManager {
-    private enum ThemeState {
+    enum ThemeState {
         case index(Int)
         case plist([String: Any])
         case dictionary([String: UIColor]?, [String: UIImage]?)
